@@ -4,51 +4,34 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Jovian Career </title>
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<title>{{company_name }} Career </title>
 	<style>
-		h1 {
-			font-size: 40px;
-			font-family: Roboto;
-			font-weight: normal;
-			color:	rgb(100,100,100);
-			text-align: center ;
-		}
-		#banner {
-			width: 100%;
+		#banner{
 			height: 250px;
-			object-fit: cover;
-		}
-		h2 {
-			font-size: 32;
-			font-family: Roboto;
-			font-weight: normal;
-			color:	rgb(100,100,100);
-			text-align: center ;
-		}
-		.bodytext {
-			font-family: Roboto;
-			color: rgb(80, 80, 80);
-		}
-		#container {
-			max-width: 720px;
-			margin: 0 auto 0 auto;
+			width: 100%;
 		}
 		
 	</style>
 </head>
 <body>
-	<div id="container">
-		<h1>Jovians Careers</h1>
-		<img id="banner" src="https://jovian-careers-website.amityr.repl.co/static/banner.jpg" alt="BANNER IMG" >
-		<h2>About jovian</h2>
-		<p class="bodytext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, iste voluptate non, laborum dolorum, facilis soluta perferendis placeat necessitatibus dolore iusto! Quas ratione quos, quae fuga earum at dicta facere nesciunt. Dignissimos ipsa sapiente, dolores totam sed accusamus quia doloremque repellendus. Harum ipsum quibusdam cum libero iste quas nesciunt ea.</p>
-	<h2>Open positions</h2>
-		<p class="bodytext">TODO - Show the jobs here</p>
-		<div style="text-align:center">
-			<buttons>Contact Us</buttons>
+	<div class="container">
+		<h1 class="text-center mt-2 mb-4">{{company_name }} Careers</h1>
+		<img class="img-fluid" id="banner" src="https://jovian-careers-website.amityr.repl.co/static/banner.jpg" alt="BANNER IMG" >
+		<h2 class="text-center">About {{company_name }}</h2>
+		<p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, iste voluptate non, laborum dolorum, facilis soluta perferendis placeat necessitatibus dolore iusto! Quas ratione quos, quae fuga earum at dicta facere nesciunt. Dignissimos ipsa sapiente, dolores totam sed accusamus quia doloremque repellendus. Harum ipsum quibusdam cum libero iste quas nesciunt ea.</p>
+	<h2 class="text-center mt-2 mb-4">Open positions</h2>
+		{% for job in jobs%}
+			{% include 'jobitem.html' %}
+		{% endfor %}
+		
+		<p >TODO - Show the jobs here</p>
+		<div class="text-center">
+			<div>
+				<button class="btn btn-primary btn-lg">Contact Us</button>
+			</div>
+			<p class="mt-4">Copywrite 2023</p>
 		</div>
-		<p>Copywrite</p>
 	</div>
 </body>
 </html>
