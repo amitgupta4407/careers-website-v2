@@ -1,4 +1,4 @@
 # careers-website
 A career website
-![image](https://user-images.githubusercontent.com/73437027/226135031-378d424f-a2b7-486d-9bdf-9dfb03a4a25f.png)
-![image](https://user-images.githubusercontent.com/73437027/226135041-63cf3370-11a5-44fc-8e34-ae061e976d6e.png)
+![image](https://user-images.githubusercontent.com/73437027/226135371-c9a06da5-04b7-437a-9f69-f15e9d7340a8.png)
+![image](https://user-images.githubusercontent.com/73437027/226135408-a80c1fe8-3361-48c6-9d0f-34048796d75c.png)
