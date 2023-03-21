@@ -29,6 +29,12 @@ def load_job_from_db(val):
 	if len(rows)==0:
 		return None
 	return dict(rows[0]._mapping)
+
+def add_application_to_db(id, data):
+  with engine.connect() as conn:
+    query = text(f"INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES ('{id}', '{data['full_name']}',' {str(data['email'])}', '{data['linkedin_url']}','{data['education']}' ,'{data['work_experience']}','{data['resume_url']}')")
+
+    conn.execute(query)
 # with engine.connect() as conn:
 # 	result = conn.execute(text("select * from jobs"))
 # 	print("type(result): ", type(result))
